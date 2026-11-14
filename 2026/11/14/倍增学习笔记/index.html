@@ -27,7 +27,7 @@
 <meta property="og:description" content="1.倍增的思想 在做完一些倍增的题目后，我总结了一些倍增的思想：   解决区间问题，大区间可以由小区间转移而来。   将一次只做一个操作转化为一次做多个操作。    2. 应用  1. ST表  引子 ST表经常用于解决RMQ问题（区间最值问题），当然也可以解决其他问题，比如在 CSP-S 2026第一轮认证 中 阅读程序题第二题 line-numbers12345678910111213141">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-11-14T04:03:07.000Z">
-<meta property="article:modified_time" content="2026-11-14T04:22:57.903Z">
+<meta property="article:modified_time" content="2026-11-14T04:50:54.088Z">
 <meta property="article:author" content="An0nym0u5">
 <meta property="article:tag" content="OI">
 <meta property="article:tag" content="倍增">
@@ -419,7 +419,7 @@
 
     <div class="fold">
       <div class="fold-title fold-info collapsed" data-toggle="collapse" href="#collapse-7e73557b" role="button" aria-expanded="false" aria-controls="collapse-7e73557b">
-        <div class="fold-arrow">▶</div>例题
+        <div class="fold-arrow">▶</div>例题[open]
       </div>
       <div class="fold-collapse collapse" id="collapse-7e73557b">
         <div class="fold-content">
@@ -906,5 +906,23 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-</body>
+<!-- hexo injector body_end start -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const foldTitles = document.querySelectorAll('.fold-title');
+        foldTitles.forEach(function(title) {
+            if (title.textContent.includes('[open]')) {
+                title.innerHTML = title.innerHTML.replace(/\[open\]/g, '');
+                const targetSelector = title.getAttribute('href');
+                if (!targetSelector) return;
+                const target = document.querySelector(targetSelector);
+                if (!target) return;
+                title.classList.remove('collapsed');
+                title.setAttribute('aria-expanded', 'true');
+                target.classList.add('show');
+            }
+        });
+    });
+    </script>
+    <!-- hexo injector body_end end --></body>
 </html>
